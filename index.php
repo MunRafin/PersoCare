@@ -354,7 +354,7 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="auth-buttons">
-                    <a href="PersoCare/loginPC.html" class="btn btn-login">Login</a>
+                    <a href="loginPC.html" class="btn btn-login">Login</a>
                     <a href="registerPC.html" class="btn btn-register">Register</a>
                 </div>
             </nav>
@@ -454,7 +454,7 @@
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#contact">Contact</a></li>
                         <li><a href="PersoCare/loginPC.html">Login</a></li>
-                        <li><a href="registerPC.html">Register</a></li>
+                        <li><a href="PersoCare/registerPC.html">Register</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -469,7 +469,7 @@
                 <div class="footer-column">
                     <h4>Contact Us</h4>
                     <ul>
-                        <li>Email: info@persocare.com</li>
+                        <li>Email: info@PersoCare.com</li>
                         <li>Phone: +1 (123) 456-7890</li>
                         <li>Address: 123 Health St, Wellness City</li>
                     </ul>
