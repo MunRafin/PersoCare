@@ -1,0 +1,148 @@
+/* ==========================================
+   LANDING PAGE SPECIFIC STYLES
+   ========================================== */
+
+/* ==========================================
+   HERO SECTION - First impression
+   ========================================== */
+
+.hero {
+    padding: 180px 0 100px; /* Extra top padding for fixed header */
+    background: linear-gradient(135deg, rgba(105,92,254,0.1) 0%, rgba(255,255,255,1) 100%);
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: var(--text-color);
+}
+
+/* Dashboard preview image */
+.hero-image {
+    max-width: 800px;
+    margin: 40px auto 0;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ==========================================
+   FEATURES SECTION - Product highlights
+   ========================================== */
+
+.features {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+/* Section heading styles */
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h3 {
+    font-size: 36px;
+    color: var(--dark-color);
+    margin-bottom: 15px;
+}
+
+.section-title p {
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Feature cards grid: Auto-adjusts columns based on screen size */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Individual feature card */
+.feature-card {
+    background-color: var(--light-color);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect: Lifts card up slightly */
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Icon container: Circular background for icons */
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.feature-card h4 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+/* ==========================================
+   CALL-TO-ACTION SECTION - Conversion
+   ========================================== */
+
+.cta {
+    padding: 100px 0;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+}
+
+.cta h3 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+/* ==========================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================== */
+
+@media (max-width: 768px) {
+    /* Smaller hero text on mobile */
+    .hero h2 {
+        font-size: 36px;
+    }
+    
+    .hero p {
+        font-size: 18px;
+    }
+}

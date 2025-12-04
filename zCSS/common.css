@@ -1,0 +1,246 @@
+/* ==========================================
+   COMMON STYLES - Used across all pages
+   ========================================== */
+
+/* CSS Variables: Easy theme customization in one place */
+:root {
+    --primary-color: #695CFE;      /* Main brand color - purple */
+    --secondary-color: #4a3db7;    /* Darker shade for hover states */
+    --accent-color: #d62828;       /* Red for alerts/warnings */
+    --light-color: #f0f4f8;        /* Light background */
+    --dark-color: #003049;         /* Dark text/backgrounds */
+    --text-color: #333;            /* Standard text */
+    --white: #ffffff;
+}
+
+/* Reset: Ensures consistent styling across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Base body styles */
+body {
+    background-color: var(--light-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Container: Centers content and adds responsive padding */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==========================================
+   BUTTON STYLES - Reusable buttons
+   ========================================== */
+
+.btn {
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: inline-block;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+/* Login button: Outlined style */
+.btn-login {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-login:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Register button: Filled style */
+.btn-register {
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    color: var(--white);
+}
+
+.btn-register:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+/* Call-to-action button: High contrast for important actions */
+.btn-cta {
+    display: inline-block;
+    background-color: var(--white);
+    color: var(--primary-color);
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s;
+}
+
+.btn-cta:hover {
+    background-color: var(--light-color);
+    transform: translateY(-3px);
+}
+
+/* ==========================================
+   HEADER STYLES - Navigation bar
+   ========================================== */
+
+header {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Keeps header above other content */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+/* Logo section */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    color: var(--primary-color);
+    font-size: 24px;
+}
+
+/* Navigation links */
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Auth buttons in header */
+.auth-buttons .btn {
+    margin-left: 15px;
+}
+
+/* ==========================================
+   FOOTER STYLES - Site footer
+   ========================================== */
+
+footer {
+    background-color: var(--dark-color);
+    color: var(--white);
+    padding: 50px 0 20px;
+}
+
+/* Footer grid: Automatically responsive columns */
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-column h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* Decorative underline for footer headings */
+.footer-column h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: var(--white);
+}
+
+/* Copyright notice at bottom */
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: #ccc;
+    font-size: 14px;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN - Mobile friendly
+   ========================================== */
+
+@media (max-width: 768px) {
+    /* Stack navigation vertically on small screens */
+    nav {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+    
+    .logo {
+        margin-bottom: 15px;
+    }
+    
+    .nav-links {
+        margin-bottom: 15px;
+    }
+    
+    .nav-links li {
+        margin: 0 10px;
+    }
+    
+    .auth-buttons {
+        margin-top: 15px;
+    }
+}
